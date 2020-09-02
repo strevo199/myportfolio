@@ -35,3 +35,23 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+
+//images;
+
+const handleInages =() =>{
+  const parent = document.querySelector('.about-infro');
+  const bio =document.querySelector('.bio');
+  const images = ['port2.jpg','port3.jpg','port4.jpg']
+  const randomImage = images[Math.floor(Math.random() * 3 )]
+  const newImage = document.createElement('img')
+  newImage.className='bio-image'
+  newImage.src = `img/${randomImage}`   
+  newImage.style.height = '250px';
+
+  parent.insertBefore(newImage,bio)
+}
+
+handleInages()
+
+//mode ;
